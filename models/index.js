@@ -1,7 +1,6 @@
 import Sequelize from 'sequelize'
 
 const sequelize = new Sequelize('slack', 'slack_db_user', 'slack_db_password', {
-  host: 'localhost',
   dialect: 'postgres',
 })
 
@@ -13,7 +12,7 @@ const models = {
 }
 
 Object.keys(models).forEach(modelName => {
-  if ("associate" in models[modelName]) {
+  if ('associate' in models[modelName]) {
     models[modelName].associate(models)
   }
 })

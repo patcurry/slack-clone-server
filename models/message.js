@@ -1,8 +1,6 @@
 export default (sequelize, DataTypes) => {
-  const Message = sequelize.define('team', {
-    text: {
-      type: DataTypes.STRING,
-    },
+  const Message = sequelize.define('message', {
+    text: DataTypes.STRING,
   })
 
   Message.associate = models => {
